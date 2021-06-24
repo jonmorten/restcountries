@@ -1,12 +1,8 @@
 import { Country } from "../../../types";
+import { formatPopulation } from "../lib";
 
 type Props = {
   countries: Country[];
-};
-
-const formatPopulation = (value: number): string => {
-  const formattedValue = (value / 1000000).toFixed(1);
-  return formattedValue === "0.0" ? "0.1" : formattedValue;
 };
 
 const formatArea = (value: number): string | number => {
@@ -44,7 +40,7 @@ export const Countries = ({ countries }: Props) => {
   const largestAreaCountry = countries[largestAreaIndex];
 
   return (
-    <div>
+    <div className="mb-6">
       <table className="table">
         <thead>
           <tr>
