@@ -35,9 +35,9 @@ export const Languages = ({ countries }: Props) => {
     return out;
   }, {});
 
-  const formattedLanguages = Object.keys(languages).map(
-    (key) => languages[key]
-  );
+  const formattedLanguages = Object.keys(languages)
+    .map((key) => languages[key])
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div>
