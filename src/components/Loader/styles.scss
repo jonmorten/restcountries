@@ -1,0 +1,25 @@
+@import "bulma";
+
+@keyframes three-quarters-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  border: 8px solid $cyan;
+  border-right-color: transparent;
+
+  animation: three-quarters-loader 1250ms infinite linear;
+  border-radius: 32px;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 64px;
+  overflow: hidden;
+  position: relative;
+  text-indent: -9999px;
+  width: 64px;
+}
