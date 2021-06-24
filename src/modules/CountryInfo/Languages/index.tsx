@@ -41,7 +41,9 @@ export const Languages = ({ countries }: Props) => {
 
   return (
     <div>
-      <table className="table mb-6">
+      <h2 className="is-size-3 mt-3 mb-4">Languages</h2>
+
+      <table className="table mb-6" aria-label="Languages">
         <thead>
           <tr>
             <th>Language</th>
@@ -52,7 +54,7 @@ export const Languages = ({ countries }: Props) => {
 
         <tbody>
           {formattedLanguages.map((language) => (
-            <tr key={language.code}>
+            <tr key={String(language.code)}>
               <td>
                 <span className="sticky-cell-content">{language.name}</span>
               </td>
@@ -64,7 +66,7 @@ export const Languages = ({ countries }: Props) => {
                 {language.countries.length > 1 && (
                   <ul className="mt-0">
                     {language.countries.map((country) => (
-                      <li>{country}</li>
+                      <li key={country}>{country}</li>
                     ))}
                   </ul>
                 )}
