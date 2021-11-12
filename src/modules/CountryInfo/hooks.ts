@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { Country } from "../../types";
 
 const fields = ["name", "region", "area", "population", "languages"];
-const baseUrl = "https://restcountries.eu/rest/v2/all";
-const url = `${baseUrl}?fields=${fields.join(";")}`;
+const baseUrl = "https://restcountries.com/v2/all";
+const url = `${baseUrl}?fields=${fields.join(",")}`;
 
 // const url = "https://httpstat.us/404";
 

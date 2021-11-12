@@ -1,6 +1,6 @@
 # restcountries
 
-A list of countries and languages, using [REST Countries](https://restcountries.eu/rest/v2/all).
+A list of countries and languages, using [REST Countries](https://restcountries.com/v2/all).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

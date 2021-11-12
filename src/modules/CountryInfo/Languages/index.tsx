@@ -17,7 +17,7 @@ type LanguageMap = Record<string, FormattedLanguage>;
 export const Languages = ({ countries }: Props) => {
   const languages = countries.reduce<LanguageMap>((out, country) => {
     country.languages.forEach((language) => {
-      const code = language.iso639_1;
+      const code = language.iso639_2;
       const entry = out[code];
       if (entry) {
         entry.countries.push(country.name);
